@@ -5,10 +5,6 @@
 <head>
 <title> LIHAT DATA USER </title>
         
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 
 </head>
 
@@ -37,7 +33,7 @@
                     </tr>
                 </thead>
 
-                <i class="material-icons">cloud</i>
+               
         
                 <tbody>
                     @foreach($pemilih as $p)
@@ -51,9 +47,8 @@
                             <td>{{ $p->agama }}</td>
                             
                             <td>
-                                <a href="/pemilih/edit/{{ $p->nik }}">Edit</a>
-                                |
-                                <a href="/pemilih/hapus/{{ $p->nik }}">Hapus</a>
+                            <a class="btn btn-info" href="/pemilih/edit/{{ $p->nik }}" role="button">EDIT</a>
+                            <a class="btn btn-danger" href="/pemilih/hapus/{{ $p->nik }}" role="button">DELETE</a>
                             </td>
                         </tr>
                 </tbody>
